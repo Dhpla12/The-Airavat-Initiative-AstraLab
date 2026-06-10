@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AstraLab is a JavaFX desktop aerospace simulation environment built around ARVT.">
+  <title>AstraLab v0.1 | Aerospace Simulation Environment</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b1f2a;
+      --muted: #566071;
+      --line: #d9dee8;
+      --surface: #ffffff;
+      --soft: #f3f6fa;
+      --accent: #006c67;
+      --accent-dark: #004d4a;
+      --steel: #314057;
+      --amber: #b46b18;
+      --shadow: 0 18px 48px rgba(27, 31, 42, 0.12);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--surface);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 1px solid rgba(217, 222, 232, 0.9);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--steel));
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(12, 20, 32, 0.9), rgba(12, 20, 32, 0.62), rgba(12, 20, 32, 0.18)),
+        url("assets/screenshots/hero-placeholder.svg");
+      background-color: #111827;
+      background-position: center;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .hero-inner,
+    .section-inner {
+      width: min(1120px, calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 94px 0 72px;
+    }
+
+    .eyebrow {
+      color: #a7f3d0;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 7vw, 5.7rem);
+      line-height: 0.94;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 640px;
+      margin: 22px 0 30px;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 12px 18px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button.primary {
+      background: #ffffff;
+      color: var(--ink);
+    }
+
+    .button.secondary {
+      border-color: rgba(255, 255, 255, 0.45);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .button.dark {
+      color: #ffffff;
+      background: var(--accent);
+    }
+
+    .button.dark:hover {
+      background: var(--accent-dark);
+    }
+
+    .release-note {
+      margin-top: 16px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.94rem;
+    }
+
+    section {
+      padding: 84px 0;
+    }
+
+    .intro {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .feature {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--surface);
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--steel);
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .screenshots {
+      background: var(--soft);
+    }
+
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .screenshot-frame {
+      min-height: 300px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .screenshot-frame.large {
+      min-height: 520px;
+    }
+
+    .screenshot-placeholder {
+      height: 100%;
+      min-height: inherit;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      color: var(--muted);
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(0, 108, 103, 0.10), rgba(180, 107, 24, 0.12)),
+        repeating-linear-gradient(45deg, rgba(49, 64, 87, 0.08) 0 1px, transparent 1px 14px);
+    }
+
+    .screenshot-placeholder span {
+      display: block;
+      max-width: 340px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px dashed rgba(49, 64, 87, 0.35);
+      background: rgba(255, 255, 255, 0.76);
+      font-weight: 800;
+      color: var(--steel);
+    }
+
+    .side-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .download {
+      background: #101827;
+      color: #ffffff;
+    }
+
+    .download .section-heading p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .download-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .download-box {
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 22px;
+    }
+
+    .download-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+    }
+
+    .download-box p,
+    .download-list {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .download-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .download-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .download-row:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .quickstart {
+      background: var(--surface);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      counter-reset: steps;
+    }
+
+    .step {
+      counter-increment: steps;
+      border-left: 4px solid var(--accent);
+      padding: 4px 0 4px 16px;
+    }
+
+    .step::before {
+      content: counter(steps, decimal-leading-zero);
+      display: block;
+      margin-bottom: 8px;
+      color: var(--amber);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 32px 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        min-height: 82vh;
+        background:
+          linear-gradient(180deg, rgba(12, 20, 32, 0.9), rgba(12, 20, 32, 0.68)),
+          url("assets/screenshots/hero-placeholder.svg");
+      }
+
+      .feature-grid,
+      .screenshot-grid,
+      .download-panel,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .screenshot-frame.large {
+        min-height: 360px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="AstraLab home">
+        <span class="brand-mark">A</span>
+        <span>AstraLab</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#download">Download</a>
+        <a href="QuickStart.html">Quick Start</a>
+        <a href="ARVT_Guide.html">ARVT Guide</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="AstraLab overview">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Public beta release</p>
+          <h1>AstraLab v0.1</h1>
+          <p class="hero-copy">
+            A desktop aerospace simulation environment for ARVT-based rocket modeling,
+            flight simulation, reports, CSV exports, and graph generation.
+          </p>
+          <div class="actions">
+            <a class="button primary" id="primaryDownload" href="#download" download>Download AstraLab</a>
+            <a class="button secondary" href="#screenshots">View Screenshots</a>
+          </div>
+          <p class="release-note" id="detectedPlatform">Choose your installer below.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro" id="features">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2>Built for educational rocketry workflows.</h2>
+          <p>
+            Write ARVT source, run simulations, inspect warnings, export data, and keep
+            project assets together in a desktop application.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <strong>ARVT editor</strong>
+            <p>Create and edit `.arvt` files with tabbed desktop workflows.</p>
+          </article>
+          <article class="feature">
+            <strong>Simulation reports</strong>
+            <p>Generate flight summaries, stability values, and validation warnings.</p>
+          </article>
+          <article class="feature">
+            <strong>Graphs and CSV</strong>
+            <p>Export trajectory data, flight graphs, and editable CSV files.</p>
+          </article>
+          <article class="feature">
+            <strong>Project structure</strong>
+            <p>Keep source, reports, graphs, and exports in one project folder.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2>Screenshots</h2>
+          <p>Replace these placeholders with real images before publishing the public page.</p>
+        </div>
+        <div class="screenshot-grid">
+          <figure class="screenshot-frame large">
+            <div class="screenshot-placeholder">
+              <span>Placeholder: main editor and simulation console screenshot</span>
+            </div>
+          </figure>
+          <div class="side-stack">
+            <figure class="screenshot-frame">
+              <div class="screenshot-placeholder">
+                <span>Placeholder: graph viewer screenshot</span>
+              </div>
+            </figure>
+            <figure class="screenshot-frame">
+              <div class="screenshot-placeholder">
+                <span>Placeholder: exported report or project folder screenshot</span>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2>Download AstraLab</h2>
+          <p>
+            Upload installers into `docs/downloads/` or replace these links with GitHub
+            Release asset URLs.
+          </p>
+        </div>
+        <div class="download-panel">
+          <article class="download-box">
+            <h3>Recommended installer</h3>
+            <p id="recommendedText">Select the installer for your operating system.</p>
+            <a class="button dark" id="recommendedDownload" href="downloads/AstraLab-1.0.0.dmg" download>
+              Download for macOS
+            </a>
+          </article>
+          <article class="download-box">
+            <h3>All downloads</h3>
+            <div class="download-list">
+              <a class="download-row" href="downloads/AstraLab-1.0.0.dmg" download>
+                <span>macOS DMG</span>
+                <strong>.dmg</strong>
+              </a>
+              <a class="download-row" href="https://github.com/Dhpla12/The-Airavat-Initiative-AstraLab/releases/latest/download/AstraLab-1.0.0.msi">
+                <span>Windows Installer</span>
+                <strong>.msi</strong>
+              </a>
+              <a class="download-row" href="https://github.com/Dhpla12/The-Airavat-Initiative-AstraLab/releases/latest/download/AstraLab-1.0.0.AppImage">
+                <span>Linux AppImage</span>
+                <strong>.AppImage</strong>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quickstart">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2>Quick start</h2>
+          <p>Install AstraLab, create a project, and run your first ARVT simulation.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>Install</h3>
+            <p>Download the installer for your operating system and complete installation.</p>
+          </article>
+          <article class="step">
+            <h3>Create</h3>
+            <p>Use File > New Project or File > New ARVT File to start a simulation source.</p>
+          </article>
+          <article class="step">
+            <h3>Export</h3>
+            <p>Run the simulation and export reports, CSV data, and graphs from AstraLab.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>AstraLab v0.1 beta. Built by Airavat Aerospace.</span>
+  </footer>
+
+  <script>
+    const downloads = {
+      mac: {
+        label: "Download for macOS",
+        href: "downloads/AstraLab-1.0.0.dmg",
+        note: "macOS detected. Download the DMG installer."
+      },
+      windows: {
+        label: "Download for Windows",
+        href: "https://github.com/Dhpla12/The-Airavat-Initiative-AstraLab/releases/latest/download/AstraLab-1.0.0.msi",
+        note: "Windows detected. Download the MSI installer."
+      },
+      linux: {
+        label: "Download for Linux",
+        href: "https://github.com/Dhpla12/The-Airavat-Initiative-AstraLab/releases/latest/download/AstraLab-1.0.0.AppImage",
+        note: "Linux detected. Download the AppImage."
+      }
+    };
+
+    function detectPlatform() {
+      const platform = navigator.userAgentData?.platform || navigator.platform || navigator.userAgent;
+      const value = platform.toLowerCase();
+      if (value.includes("win")) return "windows";
+      if (value.includes("mac")) return "mac";
+      if (value.includes("linux")) return "linux";
+      return "mac";
+    }
+
+    const selected = downloads[detectPlatform()];
+    const primary = document.getElementById("primaryDownload");
+    const recommended = document.getElementById("recommendedDownload");
+    const recommendedText = document.getElementById("recommendedText");
+    const detectedPlatform = document.getElementById("detectedPlatform");
+
+    [primary, recommended].forEach((link) => {
+      link.href = selected.href;
+      link.textContent = selected.label;
+      link.setAttribute("download", "");
+    });
+
+    recommendedText.textContent = selected.note;
+    detectedPlatform.textContent = selected.note;
+  </script>
+</body>
+</html>
