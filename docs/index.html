@@ -97,7 +97,7 @@
       align-items: center;
       background:
         linear-gradient(90deg, rgba(12, 20, 32, 0.9), rgba(12, 20, 32, 0.62), rgba(12, 20, 32, 0.18)),
-        url("assets/screenshots/hero-placeholder.svg");
+        url("assets/screenshots/app-overview.png");
       background-color: #111827;
       background-position: center;
       background-size: cover;
@@ -248,6 +248,7 @@
     }
 
     .screenshot-frame {
+      position: relative;
       min-height: 300px;
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -260,28 +261,31 @@
       min-height: 520px;
     }
 
-    .screenshot-placeholder {
-      height: 100%;
-      min-height: inherit;
-      display: grid;
-      place-items: center;
-      padding: 28px;
-      color: var(--muted);
-      text-align: center;
-      background:
-        linear-gradient(135deg, rgba(0, 108, 103, 0.10), rgba(180, 107, 24, 0.12)),
-        repeating-linear-gradient(45deg, rgba(49, 64, 87, 0.08) 0 1px, transparent 1px 14px);
+    .screenshot-frame.wide {
+      grid-column: 1 / -1;
+      min-height: 280px;
     }
 
-    .screenshot-placeholder span {
+    .screenshot-frame img {
       display: block;
-      max-width: 340px;
-      padding: 14px 16px;
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .screenshot-frame figcaption {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      padding: 8px 10px;
       border-radius: 8px;
-      border: 1px dashed rgba(49, 64, 87, 0.35);
-      background: rgba(255, 255, 255, 0.76);
+      color: #ffffff;
+      background: rgba(16, 24, 39, 0.76);
       font-weight: 800;
-      color: var(--steel);
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
     }
 
     .side-stack {
@@ -400,7 +404,7 @@
         min-height: 82vh;
         background:
           linear-gradient(180deg, rgba(12, 20, 32, 0.9), rgba(12, 20, 32, 0.68)),
-          url("assets/screenshots/hero-placeholder.svg");
+          url("assets/screenshots/app-overview.png");
       }
 
       .feature-grid,
@@ -486,26 +490,27 @@
       <div class="section-inner">
         <div class="section-heading">
           <h2>Screenshots</h2>
-          <p>Replace these placeholders with real images before publishing the public page.</p>
+          <p>Explore the ARVT editor, graph viewer, console output, and report workflow.</p>
         </div>
         <div class="screenshot-grid">
           <figure class="screenshot-frame large">
-            <div class="screenshot-placeholder">
-              <span>Placeholder: main editor and simulation console screenshot</span>
-            </div>
+            <img src="assets/screenshots/app-overview.png" alt="AstraLab desktop interface with ARVT editor, graph panel, and console warnings.">
+            <figcaption>Main simulation workspace</figcaption>
           </figure>
           <div class="side-stack">
             <figure class="screenshot-frame">
-              <div class="screenshot-placeholder">
-                <span>Placeholder: graph viewer screenshot</span>
-              </div>
+              <img src="assets/screenshots/arvt-editor.png" alt="AstraLab ARVT editor showing a high altitude rocket source file.">
+              <figcaption>ARVT source editor</figcaption>
             </figure>
             <figure class="screenshot-frame">
-              <div class="screenshot-placeholder">
-                <span>Placeholder: exported report or project folder screenshot</span>
-              </div>
+              <img src="assets/screenshots/graph-viewer.png" alt="AstraLab graph viewer showing Mach versus time.">
+              <figcaption>Interactive graph viewer</figcaption>
             </figure>
           </div>
+          <figure class="screenshot-frame wide">
+            <img src="assets/screenshots/report-output.png" alt="AstraLab console report output with apogee, velocity, acceleration, Mach number, and dynamic pressure.">
+            <figcaption>Report output</figcaption>
+          </figure>
         </div>
       </div>
     </section>

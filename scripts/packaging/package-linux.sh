@@ -6,8 +6,6 @@ APP_NAME="AstraLab"
 APP_VERSION="1.0.0"
 MAIN_JAR="astralab-${APP_VERSION}.jar"
 MAIN_CLASS="com.airavat.astralab.ui.AstraLabLauncher"
-ARVT_ASSOC="scripts/packaging/file-associations/arvt.properties"
-APROJ_ASSOC="scripts/packaging/file-associations/aproj.properties"
 
 cd "$ROOT_DIR"
 mvn -DskipTests package
@@ -26,8 +24,6 @@ jpackage \
   --main-jar "$MAIN_JAR" \
   --main-class "$MAIN_CLASS" \
   --dest target/installer \
-  --file-associations "$ARVT_ASSOC" \
-  --file-associations "$APROJ_ASSOC" \
   --java-options "-Xmx1g"
 
 mkdir -p target/installer/linux-metadata

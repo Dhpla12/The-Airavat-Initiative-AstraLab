@@ -1,8 +1,8 @@
-# Screenshot Placeholders
+# Website Screenshots
 
-Replace the placeholder references in `docs/index.html` with published screenshots:
+Screenshots used by `docs/index.html`:
 
-- `hero-placeholder.svg` can stay as a placeholder or be replaced in `docs/index.html`.
-- main editor screenshot
-- graph viewer screenshot
-- report or project folder screenshot
+- `app-overview.png`
+- `arvt-editor.png`
+- `graph-viewer.png`
+- `report-output.png`
