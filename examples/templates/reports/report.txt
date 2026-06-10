@@ -1,0 +1,30 @@
+AstraLab Flight Report
+
+Project Name: project_main
+Rocket Name: ProjectRocket
+Timestamp: 2026-06-09T18:25:07.507887Z
+
+Apogee: 107.2 m
+Maximum Velocity: 34.3 m/s
+Maximum Acceleration: 13.0 m/s^2
+Maximum Mach Number: 0.10
+Maximum Dynamic Pressure: 707.6 Pa
+Landing Distance: 91.8 m
+
+Center of Gravity: 0.784 m from nose
+Center of Pressure: 0.713 m from nose
+Static Margin: -0.89 calibers
+Stability Classification: UNSTABLE
+
+Thrust-to-Weight Ratio: 2.17
+Launch Acceleration: 11.43 m/s^2
+Dry Mass: 0.540 kg
+Propellant Mass: 0.025 kg
+Initial Mass: 0.565 kg
+Burnout Mass: 0.540 kg
+Burn Time: 3.33 s
+Total Impulse: 40.00 N*s
+Integrated Thrust: 38.30 N*s
+
+Simulation Warnings:
+WARNING: Rocket is statically unstable. Results may not represent a physically flyable vehicle.

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=AstraLab
+Comment=Aerospace simulation environment for ARVT files
+Exec=AstraLab %f
+Terminal=false
+Categories=Science;Education;Engineering;
+MimeType=application/x-astralab-arvt;application/x-astralab-project;

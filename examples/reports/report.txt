@@ -1,0 +1,31 @@
+AstraLab Flight Report
+
+Project Name: two_stage_demo
+Rocket Name: TwoStageDemo
+Timestamp: 2026-06-09T18:24:20.636737Z
+
+Apogee: 545.4 m
+Maximum Velocity: 115.7 m/s
+Maximum Acceleration: 77.9 m/s^2
+Maximum Mach Number: 0.34
+Maximum Dynamic Pressure: 8104.2 Pa
+Landing Distance: 739.9 m
+
+Center of Gravity: 1.288 m from nose
+Center of Pressure: 1.235 m from nose
+Static Margin: -0.59 calibers
+Stability Classification: UNSTABLE
+
+Thrust-to-Weight Ratio: 8.40
+Launch Acceleration: 72.57 m/s^2
+Dry Mass: 2.160 kg
+Propellant Mass: 0.025 kg
+Initial Mass: 2.185 kg
+Burnout Mass: 2.160 kg
+Burn Time: 1.78 s
+Total Impulse: 320.00 N*s
+Integrated Thrust: 306.38 N*s
+
+Simulation Warnings:
+WARNING: Rocket is statically unstable. Results may not represent a physically flyable vehicle.
+WARNING: Propellant mass and total impulse imply an unusual specific impulse. Verify motor data.

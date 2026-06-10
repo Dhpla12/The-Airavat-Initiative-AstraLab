@@ -1,0 +1,48 @@
+rocket BasicRocket
+
+nosecone {
+    shape ogive
+    length 0.25m
+    mass 0.08kg
+}
+
+body {
+    length 1.2m
+    diameter 0.08m
+    mass 0.35kg
+}
+
+fins {
+    count 4
+    span 0.12m
+    sweep 0.05m
+    mass 0.06kg
+}
+
+motor {
+    thrust_curve E12
+    propellant_mass 0.025kg
+}
+
+recovery {
+    parachute_area 0.8m2
+    deploy_delay 0.5s
+    mass 0.05kg
+}
+
+environment {
+    wind 3m/s
+    temperature 288K
+}
+
+mission {
+    launch_angle 3deg
+    rail_length 1.0m
+    max_time 90s
+}
+
+simulate
+report
+graph altitude
+graph velocity
+graph dynamic_pressure

@@ -1,0 +1,26 @@
+rocket ProjectRocket
+
+body {
+    length 1.2m
+    diameter 0.08m
+    mass 0.35kg
+}
+
+fins {
+    count 4
+    span 0.12m
+    sweep 0.05m
+    mass 0.06kg
+}
+
+motor {
+    thrust_curve E12
+}
+
+recovery {
+    parachute_area 0.8m2
+    deploy_delay 0.5s
+}
+
+simulate
+report

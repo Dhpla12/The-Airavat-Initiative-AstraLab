@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-astralab-arvt">
+    <comment>AstraLab ARVT Source File</comment>
+    <glob pattern="*.arvt"/>
+  </mime-type>
+  <mime-type type="application/x-astralab-project">
+    <comment>AstraLab Project File</comment>
+    <glob pattern="*.aproj"/>
+  </mime-type>
+</mime-info>

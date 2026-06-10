@@ -1,0 +1,191 @@
+.root {
+    -fx-font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-base: #16191d;
+    -fx-background: #16191d;
+    -fx-control-inner-background: #111418;
+    -fx-accent: #3d8bfd;
+    -fx-focus-color: #3d8bfd;
+    -fx-faint-focus-color: transparent;
+}
+
+.splash {
+    -fx-background-color: #101317;
+}
+
+.splash-title {
+    -fx-text-fill: #f4f7fb;
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-letter-spacing: 0;
+}
+
+.splash-product {
+    -fx-text-fill: #e7edf5;
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+}
+
+.splash-subtitle {
+    -fx-text-fill: #a9b8c8;
+    -fx-font-size: 13px;
+}
+
+.main-shell {
+    -fx-background-color: #16191d;
+}
+
+.top-bar {
+    -fx-background-color: #1d2228;
+    -fx-padding: 7 10 7 10;
+    -fx-border-color: #2a3038;
+    -fx-border-width: 0 0 1 0;
+}
+
+.brand {
+    -fx-text-fill: #f3f6fb;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.toolbar-button {
+    -fx-background-radius: 5;
+    -fx-background-color: #2b333d;
+    -fx-text-fill: #edf3fb;
+    -fx-padding: 6 10 6 10;
+}
+
+.toolbar-button:hover {
+    -fx-background-color: #394554;
+}
+
+.toolbar-button.primary {
+    -fx-background-color: #2f6fed;
+}
+
+.toolbar-button.primary:hover {
+    -fx-background-color: #3d7bfa;
+}
+
+.panel-title {
+    -fx-text-fill: #cbd6e2;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-padding: 7 10 7 10;
+    -fx-background-color: #1d2228;
+    -fx-border-color: #2a3038;
+    -fx-border-width: 0 0 1 0;
+}
+
+.console-output {
+    -fx-control-inner-background: #101317;
+    -fx-background-color: #101317;
+    -fx-text-fill: #d6e1ee;
+    -fx-highlight-fill: #31445f;
+    -fx-highlight-text-fill: white;
+    -fx-font-family: "JetBrains Mono", "SF Mono", "Consolas", monospace;
+    -fx-font-size: 12px;
+}
+
+.console-input {
+    -fx-control-inner-background: #151a20;
+    -fx-text-fill: #f1f5f9;
+    -fx-prompt-text-fill: #748297;
+    -fx-font-family: "JetBrains Mono", "SF Mono", "Consolas", monospace;
+    -fx-font-size: 12px;
+    -fx-background-radius: 0;
+}
+
+.status-bar {
+    -fx-background-color: #1d2228;
+    -fx-border-color: #2a3038;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 5 10 5 10;
+}
+
+.status-text {
+    -fx-text-fill: #aebbd0;
+    -fx-font-size: 12px;
+}
+
+.code-area {
+    -fx-background-color: #101317;
+    -fx-font-family: "JetBrains Mono", "SF Mono", "Consolas", monospace;
+    -fx-font-size: 13px;
+}
+
+.code-area .text {
+    -fx-fill: #dce6f2;
+}
+
+.code-area .caret {
+    -fx-stroke: #edf3fb;
+}
+
+.code-area .selection {
+    -fx-fill: #284665;
+}
+
+.lineno {
+    -fx-background-color: #151a20;
+    -fx-text-fill: #647287;
+    -fx-padding: 0 8 0 8;
+}
+
+.keyword {
+    -fx-fill: #6eb6ff;
+    -fx-font-weight: bold;
+}
+
+.number {
+    -fx-fill: #f0c674;
+}
+
+.unit {
+    -fx-fill: #b4d455;
+}
+
+.brace {
+    -fx-fill: #f4f7fb;
+    -fx-font-weight: bold;
+}
+
+.brace-match {
+    -fx-fill: #111418;
+    -fx-font-weight: bold;
+    -fx-background-color: #7ee787;
+}
+
+.comment {
+    -fx-fill: #75849a;
+}
+
+.graph-pane {
+    -fx-background-color: #111418;
+}
+
+.chart {
+    -fx-background-color: #111418;
+    -fx-padding: 8;
+}
+
+.chart-plot-background {
+    -fx-background-color: #101317;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    -fx-stroke: #2b333d;
+}
+
+.axis {
+    -fx-tick-label-fill: #aebbd0;
+}
+
+.axis-label {
+    -fx-text-fill: #cbd6e2;
+}
+
+.chart-series-line {
+    -fx-stroke: #5cc8ff;
+    -fx-stroke-width: 2px;
+}

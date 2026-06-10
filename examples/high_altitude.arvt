@@ -1,0 +1,48 @@
+rocket HighAltitudeDemo
+
+nosecone {
+    shape von_karman
+    length 0.32m
+    mass 0.12kg
+}
+
+body {
+    length 1.7m
+    diameter 0.075m
+    mass 0.62kg
+}
+
+fins {
+    count 3
+    span 0.11m
+    sweep 0.07m
+    mass 0.08kg
+}
+
+payload {
+    mass 0.2kg
+}
+
+motor {
+    thrust_curve G80
+}
+
+recovery {
+    parachute_area 1.1m2
+}
+
+environment {
+    wind 4m/s
+}
+
+mission {
+    launch_angle 2deg
+    rail_length 1.5m
+    max_time 140s
+}
+
+simulate
+report
+graph altitude
+graph mach
+export csv

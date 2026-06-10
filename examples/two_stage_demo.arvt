@@ -1,0 +1,50 @@
+rocket TwoStageDemo
+
+nosecone {
+    shape ogive
+    length 0.38m
+    mass 0.18kg
+}
+
+body {
+    length 2.1m
+    diameter 0.09m
+    mass 1.4kg
+}
+
+fins {
+    count 4
+    span 0.14m
+    sweep 0.08m
+    mass 0.18kg
+}
+
+payload {
+    mass 0.35kg
+}
+
+motor {
+    thrust_curve H180
+}
+
+recovery {
+    parachute_area 1.8m2
+}
+
+environment {
+    wind 5m/s
+}
+
+mission {
+    launch_angle 2deg
+    rail_length 2m
+    max_time 160s
+}
+
+simulate
+report
+graph altitude
+graph velocity
+
+# v0.1 treats this as a single equivalent propulsion event.
+# Stage separation is reserved for the next ARVT language revision.

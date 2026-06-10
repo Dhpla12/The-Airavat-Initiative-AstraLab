@@ -1,0 +1,53 @@
+rocket SoundingRocketDemo
+
+nosecone {
+    shape conical
+    length 0.45m
+    mass 0.3kg
+}
+
+body {
+    length 2.6m
+    diameter 0.12m
+    mass 2.3kg
+}
+
+fins {
+    count 4
+    span 0.18m
+    sweep 0.11m
+    mass 0.45kg
+}
+
+payload {
+    mass 1.1kg
+}
+
+avionics {
+    mass 0.35kg
+}
+
+motor {
+    thrust_curve I280
+}
+
+recovery {
+    parachute_area 3.0m2
+    deploy_delay 1.0s
+}
+
+environment {
+    wind 6m/s
+}
+
+mission {
+    launch_angle 1deg
+    rail_length 3m
+    max_time 180s
+}
+
+simulate
+report
+graph acceleration
+graph dynamic_pressure
+montecarlo 100
