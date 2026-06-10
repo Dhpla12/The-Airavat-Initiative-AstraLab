@@ -99,8 +99,9 @@
         linear-gradient(90deg, rgba(12, 20, 32, 0.9), rgba(12, 20, 32, 0.62), rgba(12, 20, 32, 0.18)),
         url("assets/screenshots/app-overview.png");
       background-color: #111827;
-      background-position: center;
-      background-size: cover;
+      background-position: center, right center;
+      background-repeat: no-repeat;
+      background-size: cover, contain;
       color: #fff;
     }
 
@@ -249,43 +250,32 @@
 
     .screenshot-frame {
       position: relative;
-      min-height: 300px;
+      margin: 0;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: #ffffff;
+      background: #101827;
       box-shadow: var(--shadow);
       overflow: hidden;
     }
 
-    .screenshot-frame.large {
-      min-height: 520px;
-    }
-
     .screenshot-frame.wide {
       grid-column: 1 / -1;
-      min-height: 280px;
     }
 
     .screenshot-frame img {
       display: block;
       width: 100%;
-      height: 100%;
-      min-height: inherit;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
       object-position: center;
     }
 
     .screenshot-frame figcaption {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      padding: 8px 10px;
-      border-radius: 8px;
+      padding: 10px 12px;
       color: #ffffff;
-      background: rgba(16, 24, 39, 0.76);
+      background: #101827;
       font-weight: 800;
       font-size: 0.9rem;
-      backdrop-filter: blur(10px);
     }
 
     .side-stack {
@@ -405,6 +395,9 @@
         background:
           linear-gradient(180deg, rgba(12, 20, 32, 0.9), rgba(12, 20, 32, 0.68)),
           url("assets/screenshots/app-overview.png");
+        background-repeat: no-repeat;
+        background-position: center, center bottom;
+        background-size: cover, contain;
       }
 
       .feature-grid,
@@ -414,9 +407,6 @@
         grid-template-columns: 1fr;
       }
 
-      .screenshot-frame.large {
-        min-height: 360px;
-      }
     }
   </style>
 </head>
@@ -431,8 +421,8 @@
         <a href="#features">Features</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#download">Download</a>
-        <a href="QuickStart.html">Quick Start</a>
-        <a href="ARVT_Guide.html">ARVT Guide</a>
+        <a href="QuickStart.pdf" target="_blank" rel="noopener" type="application/pdf">Quick Start</a>
+        <a href="ARVT_Guide.pdf" target="_blank" rel="noopener" type="application/pdf">ARVT Guide</a>
       </div>
     </nav>
   </header>

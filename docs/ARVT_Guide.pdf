@@ -1,0 +1,196 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 1796 >>
+stream
+BT /F2 22.0 Tf 54.0 778.0 Td (ARVT Guide) Tj ET
+BT /F2 16.0 Tf 54.0 726.0 Td (What is ARVT?) Tj ET
+BT /F1 10.5 Tf 54.0 695.0 Td (ARVT is AstraLab's text format for describing an educational rocket simulation. An ARVT) Tj ET
+BT /F1 10.5 Tf 54.0 680.0 Td (file starts with a rocket declaration, followed by optional component blocks and) Tj ET
+BT /F1 10.5 Tf 54.0 665.0 Td (simulation commands.) Tj ET
+BT /F3 9.5 Tf 70.0 639.0 Td (rocket StudentRocket) Tj ET
+BT /F3 9.5 Tf 70.0 626.0 Td ( ) Tj ET
+BT /F3 9.5 Tf 70.0 613.0 Td (simulate) Tj ET
+BT /F3 9.5 Tf 70.0 600.0 Td (report) Tj ET
+BT /F2 16.0 Tf 54.0 564.0 Td (Rocket Definition) Tj ET
+BT /F1 10.5 Tf 54.0 533.0 Td (Every file must begin with:) Tj ET
+BT /F3 9.5 Tf 70.0 507.0 Td (rocket RocketName) Tj ET
+BT /F1 10.5 Tf 54.0 483.0 Td (Names should use letters, numbers, or underscores.) Tj ET
+BT /F2 16.0 Tf 54.0 449.0 Td (Nosecone) Tj ET
+BT /F3 9.5 Tf 70.0 414.0 Td (nosecone {) Tj ET
+BT /F3 9.5 Tf 70.0 401.0 Td (    shape ogive) Tj ET
+BT /F3 9.5 Tf 70.0 388.0 Td (    length 0.25m) Tj ET
+BT /F3 9.5 Tf 70.0 375.0 Td (    mass 0.08kg) Tj ET
+BT /F3 9.5 Tf 70.0 362.0 Td (}) Tj ET
+BT /F1 10.5 Tf 54.0 338.0 Td (Supported fields:) Tj ET
+BT /F1 10.5 Tf 66.0 316.0 Td (? shape) Tj ET
+BT /F1 10.5 Tf 66.0 301.0 Td (? length) Tj ET
+BT /F1 10.5 Tf 66.0 286.0 Td (? mass) Tj ET
+BT /F2 16.0 Tf 54.0 252.0 Td (Body) Tj ET
+BT /F3 9.5 Tf 70.0 217.0 Td (body {) Tj ET
+BT /F3 9.5 Tf 70.0 204.0 Td (    length 1.2m) Tj ET
+BT /F3 9.5 Tf 70.0 191.0 Td (    diameter 0.08m) Tj ET
+BT /F3 9.5 Tf 70.0 178.0 Td (    mass 0.35kg) Tj ET
+BT /F3 9.5 Tf 70.0 165.0 Td (}) Tj ET
+BT /F1 10.5 Tf 54.0 141.0 Td (Supported fields:) Tj ET
+BT /F1 10.5 Tf 66.0 119.0 Td (? length) Tj ET
+BT /F1 10.5 Tf 66.0 104.0 Td (? diameter) Tj ET
+BT /F1 10.5 Tf 66.0 89.0 Td (? mass) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1973 >>
+stream
+BT /F2 16.0 Tf 54.0 784.0 Td (Fins) Tj ET
+BT /F3 9.5 Tf 70.0 749.0 Td (fins {) Tj ET
+BT /F3 9.5 Tf 70.0 736.0 Td (    count 4) Tj ET
+BT /F3 9.5 Tf 70.0 723.0 Td (    span 0.12m) Tj ET
+BT /F3 9.5 Tf 70.0 710.0 Td (    sweep 0.05m) Tj ET
+BT /F3 9.5 Tf 70.0 697.0 Td (    mass 0.06kg) Tj ET
+BT /F3 9.5 Tf 70.0 684.0 Td (}) Tj ET
+BT /F1 10.5 Tf 54.0 660.0 Td (Supported fields:) Tj ET
+BT /F1 10.5 Tf 66.0 638.0 Td (? count) Tj ET
+BT /F1 10.5 Tf 66.0 623.0 Td (? span) Tj ET
+BT /F1 10.5 Tf 66.0 608.0 Td (? sweep) Tj ET
+BT /F1 10.5 Tf 66.0 593.0 Td (? mass) Tj ET
+BT /F2 16.0 Tf 54.0 559.0 Td (Motor) Tj ET
+BT /F3 9.5 Tf 70.0 524.0 Td (motor {) Tj ET
+BT /F3 9.5 Tf 70.0 511.0 Td (    thrust_curve E12) Tj ET
+BT /F3 9.5 Tf 70.0 498.0 Td (    propellant_mass 0.025kg) Tj ET
+BT /F3 9.5 Tf 70.0 485.0 Td (    impulse 40) Tj ET
+BT /F3 9.5 Tf 70.0 472.0 Td (}) Tj ET
+BT /F1 10.5 Tf 54.0 448.0 Td (Supported fields:) Tj ET
+BT /F1 10.5 Tf 66.0 426.0 Td (? thrust_curve) Tj ET
+BT /F1 10.5 Tf 66.0 411.0 Td (? propellant_mass) Tj ET
+BT /F1 10.5 Tf 66.0 396.0 Td (? impulse) Tj ET
+BT /F1 10.5 Tf 54.0 374.0 Td (The current motor model is an educational designation-based approximation.) Tj ET
+BT /F1 10.5 Tf 54.0 359.0 Td (Impulse values are interpreted as newton-seconds.) Tj ET
+BT /F2 16.0 Tf 54.0 325.0 Td (Recovery) Tj ET
+BT /F3 9.5 Tf 70.0 290.0 Td (recovery {) Tj ET
+BT /F3 9.5 Tf 70.0 277.0 Td (    parachute_area 0.8m2) Tj ET
+BT /F3 9.5 Tf 70.0 264.0 Td (    deploy_delay 0.5s) Tj ET
+BT /F3 9.5 Tf 70.0 251.0 Td (    mass 0.05kg) Tj ET
+BT /F3 9.5 Tf 70.0 238.0 Td (}) Tj ET
+BT /F1 10.5 Tf 54.0 214.0 Td (Supported fields:) Tj ET
+BT /F1 10.5 Tf 66.0 192.0 Td (? parachute_area) Tj ET
+BT /F1 10.5 Tf 66.0 177.0 Td (? deploy_delay) Tj ET
+BT /F1 10.5 Tf 66.0 162.0 Td (? mass) Tj ET
+BT /F2 16.0 Tf 54.0 128.0 Td (Environment) Tj ET
+BT /F3 9.5 Tf 70.0 93.0 Td (environment {) Tj ET
+BT /F3 9.5 Tf 70.0 80.0 Td (    wind 3m/s) Tj ET
+BT /F3 9.5 Tf 70.0 67.0 Td (    temperature 288K) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 2059 >>
+stream
+BT /F3 9.5 Tf 70.0 784.0 Td (}) Tj ET
+BT /F1 10.5 Tf 54.0 760.0 Td (Supported fields:) Tj ET
+BT /F1 10.5 Tf 66.0 738.0 Td (? wind) Tj ET
+BT /F1 10.5 Tf 66.0 723.0 Td (? temperature) Tj ET
+BT /F2 16.0 Tf 54.0 689.0 Td (Mission) Tj ET
+BT /F3 9.5 Tf 70.0 654.0 Td (mission {) Tj ET
+BT /F3 9.5 Tf 70.0 641.0 Td (    launch_angle 3deg) Tj ET
+BT /F3 9.5 Tf 70.0 628.0 Td (    rail_length 1.0m) Tj ET
+BT /F3 9.5 Tf 70.0 615.0 Td (    max_time 90s) Tj ET
+BT /F3 9.5 Tf 70.0 602.0 Td (}) Tj ET
+BT /F1 10.5 Tf 54.0 578.0 Td (Supported fields:) Tj ET
+BT /F1 10.5 Tf 66.0 556.0 Td (? launch_angle) Tj ET
+BT /F1 10.5 Tf 66.0 541.0 Td (? rail_length) Tj ET
+BT /F1 10.5 Tf 66.0 526.0 Td (? max_time) Tj ET
+BT /F2 16.0 Tf 54.0 492.0 Td (Simulation Commands) Tj ET
+BT /F1 10.5 Tf 54.0 461.0 Td (Place commands after the rocket blocks.) Tj ET
+BT /F3 9.5 Tf 70.0 435.0 Td (simulate) Tj ET
+BT /F3 9.5 Tf 70.0 422.0 Td (graph altitude) Tj ET
+BT /F3 9.5 Tf 70.0 409.0 Td (graph velocity) Tj ET
+BT /F3 9.5 Tf 70.0 396.0 Td (graph acceleration) Tj ET
+BT /F3 9.5 Tf 70.0 383.0 Td (graph dynamic_pressure) Tj ET
+BT /F3 9.5 Tf 70.0 370.0 Td (graph trajectory) Tj ET
+BT /F3 9.5 Tf 70.0 357.0 Td (export csv) Tj ET
+BT /F3 9.5 Tf 70.0 344.0 Td (export graphs) Tj ET
+BT /F3 9.5 Tf 70.0 331.0 Td (report) Tj ET
+BT /F1 10.5 Tf 54.0 307.0 Td (Supported commands:) Tj ET
+BT /F1 10.5 Tf 66.0 285.0 Td (? simulate) Tj ET
+BT /F1 10.5 Tf 66.0 270.0 Td (? report) Tj ET
+BT /F1 10.5 Tf 66.0 255.0 Td (? graph altitude) Tj ET
+BT /F1 10.5 Tf 66.0 240.0 Td (? graph velocity) Tj ET
+BT /F1 10.5 Tf 66.0 225.0 Td (? graph acceleration) Tj ET
+BT /F1 10.5 Tf 66.0 210.0 Td (? graph mach) Tj ET
+BT /F1 10.5 Tf 66.0 195.0 Td (? graph dynamic_pressure) Tj ET
+BT /F1 10.5 Tf 66.0 180.0 Td (? graph trajectory) Tj ET
+BT /F1 10.5 Tf 66.0 165.0 Td (? export csv) Tj ET
+BT /F1 10.5 Tf 66.0 150.0 Td (? export report) Tj ET
+BT /F1 10.5 Tf 66.0 135.0 Td (? export graphs) Tj ET
+BT /F1 10.5 Tf 66.0 120.0 Td (? montecarlo N) Tj ET
+BT /F1 10.5 Tf 66.0 105.0 Td (? help) Tj ET
+BT /F1 10.5 Tf 66.0 90.0 Td (? clear) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 1110 >>
+stream
+BT /F2 16.0 Tf 54.0 784.0 Td (Reports) Tj ET
+BT /F1 10.5 Tf 54.0 753.0 Td (Reports include project name, rocket name, timestamp, apogee, maximum velocity, maximum) Tj ET
+BT /F1 10.5 Tf 54.0 738.0 Td (acceleration, maximum Mach number, maximum dynamic pressure, landing distance, CG, CP,) Tj ET
+BT /F1 10.5 Tf 54.0 723.0 Td (static margin, mass and thrust checks, and simulation warnings.) Tj ET
+BT /F1 10.5 Tf 54.0 701.0 Td (For projects, reports are written to:) Tj ET
+BT /F3 9.5 Tf 70.0 675.0 Td (reports/report.txt) Tj ET
+BT /F2 16.0 Tf 54.0 639.0 Td (Example Files) Tj ET
+BT /F1 10.5 Tf 54.0 608.0 Td (Bundled examples:) Tj ET
+BT /F1 10.5 Tf 66.0 586.0 Td (? examples/student_rocket.arvt) Tj ET
+BT /F1 10.5 Tf 66.0 571.0 Td (? examples/high_altitude.arvt) Tj ET
+BT /F1 10.5 Tf 66.0 556.0 Td (? examples/sounding_rocket.arvt) Tj ET
+BT /F1 10.5 Tf 66.0 541.0 Td (? examples/two_stage_demo.arvt) Tj ET
+BT /F1 10.5 Tf 54.0 519.0 Td (Starter templates:) Tj ET
+BT /F1 10.5 Tf 66.0 497.0 Td (? examples/templates/basic_rocket.arvt) Tj ET
+BT /F1 10.5 Tf 66.0 482.0 Td (? examples/templates/project_main.arvt) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000141 00000 n 
+0000000211 00000 n 
+0000000286 00000 n 
+0000000354 00000 n 
+0000002202 00000 n 
+0000002348 00000 n 
+0000004373 00000 n 
+0000004519 00000 n 
+0000006631 00000 n 
+0000006779 00000 n 
+0000007942 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R /Info << /Title (ARVT Guide) >> >>
+startxref
+8090
+%%EOF

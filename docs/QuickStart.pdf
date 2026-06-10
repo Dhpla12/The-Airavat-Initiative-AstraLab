@@ -1,0 +1,132 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2041 >>
+stream
+BT /F2 22.0 Tf 54.0 778.0 Td (AstraLab Quick Start) Tj ET
+BT /F2 16.0 Tf 54.0 726.0 Td (Installation) Tj ET
+BT /F2 12.5 Tf 54.0 687.0 Td (macOS) Tj ET
+BT /F1 10.5 Tf 54.0 663.0 Td (Build the installer on macOS:) Tj ET
+BT /F3 9.5 Tf 70.0 637.0 Td (scripts/packaging/package-macos.sh) Tj ET
+BT /F1 10.5 Tf 54.0 613.0 Td (Open target/installer/AstraLab-1.0.0.dmg, then drag AstraLab.app to /Applications.) Tj ET
+BT /F2 12.5 Tf 54.0 583.0 Td (Windows) Tj ET
+BT /F1 10.5 Tf 54.0 559.0 Td (Build the MSI from PowerShell on Windows:) Tj ET
+BT /F3 9.5 Tf 70.0 533.0 Td (scripts\\packaging\\package-windows.ps1) Tj ET
+BT /F1 10.5 Tf 54.0 509.0 Td (Run target\\installer\\AstraLab-1.0.0.msi. The installer adds AstraLab to the Start Menu,) Tj ET
+BT /F1 10.5 Tf 54.0 494.0 Td (creates a shortcut, registers .arvt and .aproj, and appears in Add/Remove Programs.) Tj ET
+BT /F2 12.5 Tf 54.0 464.0 Td (Linux) Tj ET
+BT /F1 10.5 Tf 54.0 440.0 Td (Build the app image on Linux:) Tj ET
+BT /F3 9.5 Tf 70.0 414.0 Td (scripts/packaging/package-linux.sh) Tj ET
+BT /F1 10.5 Tf 54.0 390.0 Td (The app image is written to target/installer/AstraLab/. If appimagetool is installed, an) Tj ET
+BT /F1 10.5 Tf 54.0 375.0 Td (AppImage is also produced.) Tj ET
+BT /F2 16.0 Tf 54.0 341.0 Td (Creating a Project) Tj ET
+BT /F1 10.5 Tf 54.0 310.0 Td (Use File > New Project.) Tj ET
+BT /F1 10.5 Tf 54.0 288.0 Td (Enter a project name and choose a location. AstraLab creates:) Tj ET
+BT /F3 9.5 Tf 70.0 262.0 Td (ProjectName/) Tj ET
+BT /F3 9.5 Tf 70.0 249.0 Td (project.aproj) Tj ET
+BT /F3 9.5 Tf 70.0 236.0 Td (main.arvt) Tj ET
+BT /F3 9.5 Tf 70.0 223.0 Td (exports/) Tj ET
+BT /F3 9.5 Tf 70.0 210.0 Td (graphs/) Tj ET
+BT /F3 9.5 Tf 70.0 197.0 Td (reports/) Tj ET
+BT /F1 10.5 Tf 54.0 173.0 Td (The project opens automatically after creation.) Tj ET
+BT /F2 16.0 Tf 54.0 139.0 Td (Creating an ARVT File) Tj ET
+BT /F1 10.5 Tf 54.0 108.0 Td (Use File > New ARVT File.) Tj ET
+BT /F1 10.5 Tf 54.0 86.0 Td (AstraLab opens a new unsaved tab named NewFile.arvt* with starter contents:) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 2430 >>
+stream
+BT /F3 9.5 Tf 70.0 784.0 Td (rocket NewRocket) Tj ET
+BT /F3 9.5 Tf 70.0 771.0 Td ( ) Tj ET
+BT /F3 9.5 Tf 70.0 758.0 Td (simulate) Tj ET
+BT /F3 9.5 Tf 70.0 745.0 Td (report) Tj ET
+BT /F1 10.5 Tf 54.0 721.0 Td (Use File > Save or File > Save As to choose a filename and location. Standalone ARVT) Tj ET
+BT /F1 10.5 Tf 54.0 706.0 Td (files are saved as .arvt.) Tj ET
+BT /F2 16.0 Tf 54.0 672.0 Td (Running Simulations) Tj ET
+BT /F1 10.5 Tf 54.0 641.0 Td (Click Run, or include the command:) Tj ET
+BT /F3 9.5 Tf 70.0 615.0 Td (simulate) Tj ET
+BT /F1 10.5 Tf 54.0 591.0 Td (The console reports parsing, stability, thrust-to-weight ratio, warnings, and the) Tj ET
+BT /F1 10.5 Tf 54.0 576.0 Td (simulation summary.) Tj ET
+BT /F2 16.0 Tf 54.0 542.0 Td (Exporting Results) Tj ET
+BT /F1 10.5 Tf 54.0 511.0 Td (After a simulation, use the toolbar or File menu:) Tj ET
+BT /F1 10.5 Tf 66.0 489.0 Td (? CSV writes exports/flight_data.csv.) Tj ET
+BT /F1 10.5 Tf 66.0 474.0 Td (? Graph writes the selected graph PNG.) Tj ET
+BT /F1 10.5 Tf 66.0 459.0 Td (? All Graphs writes all standard graph PNGs.) Tj ET
+BT /F1 10.5 Tf 66.0 444.0 Td (? report in ARVT or the Report button writes reports/report.txt.) Tj ET
+BT /F1 10.5 Tf 54.0 422.0 Td (Simulation output is also updated automatically after each simulation run.) Tj ET
+BT /F2 16.0 Tf 54.0 388.0 Td (Project Structure) Tj ET
+BT /F1 10.5 Tf 54.0 357.0 Td (Projects use a fixed layout:) Tj ET
+BT /F3 9.5 Tf 70.0 331.0 Td (ProjectName/) Tj ET
+BT /F3 9.5 Tf 70.0 318.0 Td (project.aproj) Tj ET
+BT /F3 9.5 Tf 70.0 305.0 Td (main.arvt) Tj ET
+BT /F3 9.5 Tf 70.0 292.0 Td (exports/) Tj ET
+BT /F3 9.5 Tf 70.0 279.0 Td (    flight_data.csv) Tj ET
+BT /F3 9.5 Tf 70.0 266.0 Td (graphs/) Tj ET
+BT /F3 9.5 Tf 70.0 253.0 Td (    altitude.png) Tj ET
+BT /F3 9.5 Tf 70.0 240.0 Td (    velocity.png) Tj ET
+BT /F3 9.5 Tf 70.0 227.0 Td (    acceleration.png) Tj ET
+BT /F3 9.5 Tf 70.0 214.0 Td (    dynamic_pressure.png) Tj ET
+BT /F3 9.5 Tf 70.0 201.0 Td (    trajectory.png) Tj ET
+BT /F3 9.5 Tf 70.0 188.0 Td (reports/) Tj ET
+BT /F3 9.5 Tf 70.0 175.0 Td (    report.txt) Tj ET
+BT /F1 10.5 Tf 54.0 151.0 Td (Keep project assets inside this folder so Open Recent and operating-system file) Tj ET
+BT /F1 10.5 Tf 54.0 136.0 Td (associations continue to work cleanly.) Tj ET
+BT /F2 16.0 Tf 54.0 102.0 Td (Troubleshooting) Tj ET
+BT /F1 10.5 Tf 54.0 71.0 Td (If a file does not open, verify it ends in .arvt or .aproj.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 587 >>
+stream
+BT /F1 10.5 Tf 54.0 777.0 Td (If graphs or CSV files are missing, run the simulation again and check that the project) Tj ET
+BT /F1 10.5 Tf 54.0 762.0 Td (folder is writable.) Tj ET
+BT /F1 10.5 Tf 54.0 740.0 Td (If the app will not launch from a packaged installer, rebuild on the target platform with) Tj ET
+BT /F1 10.5 Tf 54.0 725.0 Td (a full JDK 21 or newer.) Tj ET
+BT /F1 10.5 Tf 54.0 703.0 Td (If file associations are not active after installation, reinstall the platform package) Tj ET
+BT /F1 10.5 Tf 54.0 688.0 Td (and see docs/PACKAGING.md for manual registration notes.) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000134 00000 n 
+0000000204 00000 n 
+0000000279 00000 n 
+0000000347 00000 n 
+0000002440 00000 n 
+0000002586 00000 n 
+0000005068 00000 n 
+0000005214 00000 n 
+0000005853 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R /Info << /Title (AstraLab Quick Start) >> >>
+startxref
+6001
+%%EOF
