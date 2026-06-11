@@ -271,11 +271,16 @@
     }
 
     .screenshot-frame figcaption {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
       padding: 10px 12px;
+      border-radius: 8px;
       color: #ffffff;
-      background: #101827;
+      background: rgba(16, 24, 39, 0.82);
       font-weight: 800;
       font-size: 0.9rem;
+      backdrop-filter: blur(10px);
     }
 
     .side-stack {
@@ -341,6 +346,37 @@
       background: var(--surface);
     }
 
+    .community {
+      background: var(--soft);
+    }
+
+    .community-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .community-copy {
+      max-width: 720px;
+    }
+
+    .community-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .button.outline {
+      color: var(--accent-dark);
+      border-color: rgba(0, 108, 103, 0.34);
+      background: #ffffff;
+    }
+
+    .button.outline:hover {
+      border-color: var(--accent);
+    }
+
     .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -403,8 +439,13 @@
       .feature-grid,
       .screenshot-grid,
       .download-panel,
-      .steps {
+      .steps,
+      .community-inner {
         grid-template-columns: 1fr;
+      }
+
+      .community-inner .actions {
+        justify-content: flex-start;
       }
 
     }
@@ -562,6 +603,22 @@
             <h3>Export</h3>
             <p>Run the simulation and export reports, CSV data, and graphs from AstraLab.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community" id="community">
+      <div class="section-inner community-inner">
+        <div class="community-copy">
+          <h2>Help shape AstraLab.</h2>
+          <p>
+            Join the Airavat initiative or send feedback from your first runs,
+            classroom tests, and aerospace experiments.
+          </p>
+        </div>
+        <div class="actions">
+          <a class="button dark" href="https://forms.gle/S9xN9F7RcoXBY46h9" target="_blank" rel="noopener">Join the initiative</a>
+          <a class="button outline" href="https://forms.gle/KiEys1QFPzZQ9gyn6" target="_blank" rel="noopener">Provide feedback</a>
         </div>
       </div>
     </section>
